@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HoteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 
@@ -29,3 +30,12 @@ Route::post('/inscription-step-2/post', [PagesController::class, 'step2_post'])-
 
 Route::get('/inscription-step-3', [PagesController::class, 'step3'])->name('pages.step3');
 Route::post('/inscription-step-3/post', [PagesController::class, 'step3_post'])->name('pages.step3.post');
+
+
+//Route des Hotes
+Route::get('/hote-login', [HoteController::class, 'login'])->name('hote.login');
+Route::post('/hote-login/post', [HoteController::class, 'login_post'])->name('hote.login.post');
+
+Route::get('/hote-dashboard', [HoteController::class, 'dashboard'])->name('hote.dashboard');
+Route::get('/hote-cni', [HoteController::class, 'cni'])->name('hote.cni');
+Route::get('/hote-logout', [HoteController::class, 'logout'])->name('hote.logout');
