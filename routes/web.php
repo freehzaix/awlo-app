@@ -38,4 +38,5 @@ Route::post('/hote-login/post', [HoteController::class, 'login_post'])->name('ho
 
 Route::get('/hote-dashboard', [HoteController::class, 'dashboard'])->name('hote.dashboard');
 Route::get('/hote-cni', [HoteController::class, 'cni'])->name('hote.cni');
+Route::get('/hote-information', [HoteController::class, 'information'])->name('hote.information');
 Route::get('/hote-logout', [HoteController::class, 'logout'])->name('hote.logout');

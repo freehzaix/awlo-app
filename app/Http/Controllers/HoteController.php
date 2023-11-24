@@ -67,4 +67,9 @@ class HoteController extends Controller
         return view('hote.cni', compact('cnis'));
     }
 
+    //Vue Information sur l'hôte connecter
+    public function information(){
+        return view('hote.information');
+    }
+
 }
