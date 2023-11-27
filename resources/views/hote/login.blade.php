@@ -4,9 +4,7 @@
 <div class="col-md-7">
     <h3>Connexion à <strong>Awlo App</strong></h3>
         <p class="mb-4">
-            @if(session('erreurLogin'))
-                <div class="alert alert-danger"> {{ session('erreurLogin') }} </div>
-            @endif
+            <x-erreur-login />
         </p>
         <form action="{{ route('hote.login.post') }}" method="post">
             @csrf

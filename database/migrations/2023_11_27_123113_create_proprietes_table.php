@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cnis', function (Blueprint $table) {
+        Schema::create('proprietes', function (Blueprint $table) {
             $table->id();
-            $table->string('cni_recto');
-            $table->string('cni_verso');
+            $table->string('designation');
+            $table->longText('description')->nullable();
+            $table->decimal('prix');
+            $table->string('slug_prop');
             $table->timestamps();
+            $table->foreignId('categorie_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('disponibilite_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('hote_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
         });
     }
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cnis');
+        Schema::dropIfExists('proprietes');
     }
 };

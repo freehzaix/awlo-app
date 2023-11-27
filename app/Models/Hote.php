@@ -24,4 +24,8 @@ class Hote extends Model
         return $this->hasMany(Cni::class);
     }
 
+    public function proprietes(): HasMany {
+        return $this->hasMany(Propriete::class);
+    }
+
 }

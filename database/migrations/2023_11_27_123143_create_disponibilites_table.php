@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cnis', function (Blueprint $table) {
+        Schema::create('disponibilites', function (Blueprint $table) {
             $table->id();
-            $table->string('cni_recto');
-            $table->string('cni_verso');
-            $table->timestamps();
-            $table->foreignId('hote_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->string('libelle');
         });
     }
 
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cnis');
+        Schema::dropIfExists('disponibilites');
     }
 };

@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cnis', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('cni_recto');
-            $table->string('cni_verso');
+            $table->string('url_image');
+            $table->string('text_alt');
             $table->timestamps();
-            $table->foreignId('hote_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('propriete_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cnis');
+        Schema::dropIfExists('images');
     }
 };

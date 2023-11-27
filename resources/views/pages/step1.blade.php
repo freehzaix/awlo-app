@@ -53,9 +53,7 @@
 					<div class="col-lg-6">
 						<h1 class="section-title">Parlez nous de votre logement</h1>
 
-						@if(session('status'))
-							<div class="alert alert-success"> {{ session('status') }} </div>
-						@endif
+						<x-alert />
 						
 						<div class="row my-5">
 							
