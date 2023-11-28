@@ -20,6 +20,5 @@ class CategorieSeeder extends Seeder
         DB::table('categories')->insert(['libelle' => 'Magasin']);
         DB::table('categories')->insert(['libelle' => 'Entrepôt']);
         DB::table('categories')->insert(['libelle' => 'Terrain']);
-        DB::table('categories')->insert(['libelle' => 'Terrain']);
     }
 }

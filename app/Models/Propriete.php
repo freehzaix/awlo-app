@@ -28,7 +28,7 @@ class Propriete extends Model
     public function disponibilite(): BelongsTo {
         return $this->belongsTo(Disponibilite::class, 'disponibilite_id');
     }
-
+    
     public function hote(): BelongsTo {
         return $this->belongsTo(Hote::class, 'hote_id');
     }

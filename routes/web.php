@@ -3,6 +3,7 @@
 use App\Http\Controllers\HoteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProprieteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,8 @@ Route::get('/hote-dashboard', [HoteController::class, 'dashboard'])->name('hote.
 Route::get('/hote-cni', [HoteController::class, 'cni'])->name('hote.cni');
 Route::get('/hote-information', [HoteController::class, 'information'])->name('hote.information');
 Route::get('/hote-logout', [HoteController::class, 'logout'])->name('hote.logout');
+
+//Propriété des hôtes
+Route::get('/hote-propriete-add', [ProprieteController::class, 'form_ajouter_propriete'])->name('propriete.ajouter');
+Route::get('/hote-propriete-liste', [ProprieteController::class, 'table_liste_propriete'])->name('propriete.liste');
+
